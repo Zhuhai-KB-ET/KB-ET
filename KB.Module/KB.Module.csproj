@@ -29,9 +29,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bitbug_favicon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -57,186 +60,6 @@
     </Compile>
     <Compile Include="Base\BaseCustomer.designer.cs">
       <DependentUpon>BaseCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\BaseCustomerLocation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\BaseCustomerLocation.Designer.cs">
-      <DependentUpon>BaseCustomerLocation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\BaseCustPart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\BaseCustPart.designer.cs">
-      <DependentUpon>BaseCustPart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\BaseFOB.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\BaseFOB.Designer.cs">
-      <DependentUpon>BaseFOB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\BaseProductionRoute.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\BaseProductionRoute.designer.cs">
-      <DependentUpon>BaseProductionRoute.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\BaseSalesOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\BaseSalesOrder.designer.cs">
-      <DependentUpon>BaseSalesOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\BaseUnit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\BaseUnit.Designer.cs">
-      <DependentUpon>BaseUnit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\BaseWorkOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\BaseWorkOrder.Designer.cs">
-      <DependentUpon>BaseWorkOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormApprovalRoute.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormApprovalRoute.designer.cs">
-      <DependentUpon>FormApprovalRoute.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormEmployee.designer.cs">
-      <DependentUpon>FormEmployee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormEngineeringDepartments.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormEngineeringDepartments.designer.cs">
-      <DependentUpon>FormEngineeringDepartments.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormEquipment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormEquipment.Designer.cs">
-      <DependentUpon>FormEquipment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormInvPart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormInvPart.Designer.cs">
-      <DependentUpon>FormInvPart.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormLocation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormLocation.Designer.cs">
-      <DependentUpon>FormLocation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormMaintenanceOrders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormMaintenanceOrders.designer.cs">
-      <DependentUpon>FormMaintenanceOrders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormMaterialRejects.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormMaterialRejects.Designer.cs">
-      <DependentUpon>FormMaterialRejects.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormMir.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormMir.designer.cs">
-      <DependentUpon>FormMir.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormMirForMaintenanceOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormMirForMaintenanceOrder.Designer.cs">
-      <DependentUpon>FormMirForMaintenanceOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormNotePad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormNotePad.Designer.cs">
-      <DependentUpon>FormNotePad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormNotePadLibrary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormNotePadLibrary.Designer.cs">
-      <DependentUpon>FormNotePadLibrary.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormParameter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormParameter.Designer.cs">
-      <DependentUpon>FormParameter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormProductionParameter.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormProductionParameter.Designer.cs">
-      <DependentUpon>FormProductionParameter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormProductionReject.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormProductionReject.Designer.cs">
-      <DependentUpon>FormProductionReject.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormProductionResource.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormProductionResource.Designer.cs">
-      <DependentUpon>FormProductionResource.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormRejectReason.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormRejectReason.Designer.cs">
-      <DependentUpon>FormRejectReason.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormReplenishmentOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormReplenishmentOrder.Designer.cs">
-      <DependentUpon>FormReplenishmentOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormReportViewer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormReportViewer.Designer.cs">
-      <DependentUpon>FormReportViewer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormRouteStep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormRouteStep.Designer.cs">
-      <DependentUpon>FormRouteStep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormShippingMethod.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormShippingMethod.Designer.cs">
-      <DependentUpon>FormShippingMethod.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormSupplier.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormSupplier.Designer.cs">
-      <DependentUpon>FormSupplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Base\FormWarehouse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Base\FormWarehouse.Designer.cs">
-      <DependentUpon>FormWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildModule.cs">
       <SubType>Form</SubType>
@@ -279,226 +102,18 @@
     <Compile Include="PopWinForm\BL\FrmData0002.Designer.cs">
       <DependentUpon>FrmData0002.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0005.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0005.Designer.cs">
-      <DependentUpon>FrmData0005.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0008.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0008.Designer.cs">
-      <DependentUpon>FrmData0008.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0010.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0010.Designer.cs">
-      <DependentUpon>FrmData0010.cs</DependentUpon>
-    </Compile>
     <Compile Include="PopWinForm\BL\FrmData0013.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PopWinForm\BL\FrmData0013.Designer.cs">
       <DependentUpon>FrmData0013.cs</DependentUpon>
     </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0015.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0015.Designer.cs">
-      <DependentUpon>FrmData0015.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0016.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0016.Designer.cs">
-      <DependentUpon>FrmData0016.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017.Designer.cs">
-      <DependentUpon>FrmData0017.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017Inv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017Inv.Designer.cs">
-      <DependentUpon>FrmData0017Inv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017SemiInv.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017SemiInv.Designer.cs">
-      <DependentUpon>FrmData0017SemiInv.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017_WH.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017_WH.Designer.cs">
-      <DependentUpon>FrmData0017_WH.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017_WH2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0017_WH2.Designer.cs">
-      <DependentUpon>FrmData0017_WH2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0023.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0023.Designer.cs">
-      <DependentUpon>FrmData0023.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0034.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0034.Designer.cs">
-      <DependentUpon>FrmData0034.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0035.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0035.Designer.cs">
-      <DependentUpon>FrmData0035.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0036.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0036.Designer.cs">
-      <DependentUpon>FrmData0036.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0037.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0037.Designer.cs">
-      <DependentUpon>FrmData0037.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0038.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0038.Designer.cs">
-      <DependentUpon>FrmData0038.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0050Cust.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0050Cust.Designer.cs">
-      <DependentUpon>FrmData0050Cust.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0050Sales.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0050Sales.Designer.cs">
-      <DependentUpon>FrmData0050Sales.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0103.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0103.Designer.cs">
-      <DependentUpon>FrmData0103.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0193.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0193.Designer.cs">
-      <DependentUpon>FrmData0193.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0469.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0469.Designer.cs">
-      <DependentUpon>FrmData0469.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0497.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0497.Designer.cs">
-      <DependentUpon>FrmData0497.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0583.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmData0583.Designer.cs">
-      <DependentUpon>FrmData0583.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmDate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmDate.Designer.cs">
-      <DependentUpon>FrmDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmHTTP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmHTTP.Designer.cs">
-      <DependentUpon>FrmHTTP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmNotepad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PopWinForm\BL\FrmNotepad.Designer.cs">
-      <DependentUpon>FrmNotepad.cs</DependentUpon>
-    </Compile>
     <Compile Include="PopWinForm\DL\FrmApprovalDL.cs" />
     <Compile Include="PopWinForm\DL\FrmData0002DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0005DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0008DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0010DL.cs" />
     <Compile Include="PopWinForm\DL\FrmData0013DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0015DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0016DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0017DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0017InvDL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0017SemiInvDL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0017_WH2DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0017_WHDL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0023DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0034DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0035DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0036DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0037DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0038DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0050CustDL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0050SalesDL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0103DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0193DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0469DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0497DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmData0583DL.cs" />
-    <Compile Include="PopWinForm\DL\FrmDateDL.cs" />
-    <Compile Include="PopWinForm\DL\FrmHTTPDL.cs" />
-    <Compile Include="PopWinForm\DL\FrmNotepadDL.cs" />
     <Compile Include="PopWinForm\IL\FrmApprovalIL.cs" />
     <Compile Include="PopWinForm\IL\FrmData0002IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0005IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0008IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0010IL.cs" />
     <Compile Include="PopWinForm\IL\FrmData0013IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0015IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0016IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0017IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0017InvIL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0017SemiInvIL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0017_WH2IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0017_WHIL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0023IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0034IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0035IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0036IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0037IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0038IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0050CustIL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0050SalesIL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0103IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0193IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0469IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0497IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmData0583IL.cs" />
-    <Compile Include="PopWinForm\IL\FrmDateIL.cs" />
-    <Compile Include="PopWinForm\IL\FrmHTTPIL.cs" />
-    <Compile Include="PopWinForm\IL\FrmNotepadIL.cs" />
     <Compile Include="PrintHelper\RDLReport.cs" />
     <Compile Include="PrintHelper\ReportPrintDocument.cs">
       <SubType>Component</SubType>
@@ -518,96 +133,6 @@
     <EmbeddedResource Include="Base\BaseCustomer.resx">
       <DependentUpon>BaseCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Base\BaseCustomerLocation.resx">
-      <DependentUpon>BaseCustomerLocation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\BaseCustPart.resx">
-      <DependentUpon>BaseCustPart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\BaseFOB.resx">
-      <DependentUpon>BaseFOB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\BaseProductionRoute.resx">
-      <DependentUpon>BaseProductionRoute.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\BaseSalesOrder.resx">
-      <DependentUpon>BaseSalesOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\BaseUnit.resx">
-      <DependentUpon>BaseUnit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\BaseWorkOrder.resx">
-      <DependentUpon>BaseWorkOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormApprovalRoute.resx">
-      <DependentUpon>FormApprovalRoute.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormEmployee.resx">
-      <DependentUpon>FormEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormEngineeringDepartments.resx">
-      <DependentUpon>FormEngineeringDepartments.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormEquipment.resx">
-      <DependentUpon>FormEquipment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormInvPart.resx">
-      <DependentUpon>FormInvPart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormLocation.resx">
-      <DependentUpon>FormLocation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormMaintenanceOrders.resx">
-      <DependentUpon>FormMaintenanceOrders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormMaterialRejects.resx">
-      <DependentUpon>FormMaterialRejects.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormMir.resx">
-      <DependentUpon>FormMir.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormMirForMaintenanceOrder.resx">
-      <DependentUpon>FormMirForMaintenanceOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormNotePad.resx">
-      <DependentUpon>FormNotePad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormNotePadLibrary.resx">
-      <DependentUpon>FormNotePadLibrary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormParameter.resx">
-      <DependentUpon>FormParameter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormProductionParameter.resx">
-      <DependentUpon>FormProductionParameter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormProductionReject.resx">
-      <DependentUpon>FormProductionReject.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormProductionResource.resx">
-      <DependentUpon>FormProductionResource.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormRejectReason.resx">
-      <DependentUpon>FormRejectReason.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormReplenishmentOrder.resx">
-      <DependentUpon>FormReplenishmentOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormReportViewer.resx">
-      <DependentUpon>FormReportViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormRouteStep.resx">
-      <DependentUpon>FormRouteStep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormShippingMethod.resx">
-      <DependentUpon>FormShippingMethod.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormSupplier.resx">
-      <DependentUpon>FormSupplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Base\FormWarehouse.resx">
-      <DependentUpon>FormWarehouse.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ChildModule.resx">
       <DependentUpon>ChildModule.cs</DependentUpon>
     </EmbeddedResource>
@@ -626,92 +151,15 @@
     <EmbeddedResource Include="PopWinForm\BL\FrmData0002.resx">
       <DependentUpon>FrmData0002.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0005.resx">
-      <DependentUpon>FrmData0005.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0008.resx">
-      <DependentUpon>FrmData0008.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0010.resx">
-      <DependentUpon>FrmData0010.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PopWinForm\BL\FrmData0013.resx">
       <DependentUpon>FrmData0013.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0015.resx">
-      <DependentUpon>FrmData0015.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0016.resx">
-      <DependentUpon>FrmData0016.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0017.resx">
-      <DependentUpon>FrmData0017.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0017Inv.resx">
-      <DependentUpon>FrmData0017Inv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0017SemiInv.resx">
-      <DependentUpon>FrmData0017SemiInv.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0017_WH.resx">
-      <DependentUpon>FrmData0017_WH.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0017_WH2.resx">
-      <DependentUpon>FrmData0017_WH2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0023.resx">
-      <DependentUpon>FrmData0023.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0034.resx">
-      <DependentUpon>FrmData0034.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0035.resx">
-      <DependentUpon>FrmData0035.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0036.resx">
-      <DependentUpon>FrmData0036.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0037.resx">
-      <DependentUpon>FrmData0037.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0038.resx">
-      <DependentUpon>FrmData0038.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0050Cust.resx">
-      <DependentUpon>FrmData0050Cust.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0050Sales.resx">
-      <DependentUpon>FrmData0050Sales.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0103.resx">
-      <DependentUpon>FrmData0103.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0193.resx">
-      <DependentUpon>FrmData0193.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0469.resx">
-      <DependentUpon>FrmData0469.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0497.resx">
-      <DependentUpon>FrmData0497.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmData0583.resx">
-      <DependentUpon>FrmData0583.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmDate.resx">
-      <DependentUpon>FrmDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmHTTP.resx">
-      <DependentUpon>FrmHTTP.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PopWinForm\BL\FrmNotepad.resx">
-      <DependentUpon>FrmNotepad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Remote\FrmPrintView.resx">
       <DependentUpon>FrmPrintView.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bitbug_favicon.ico" />
     <Content Include="PopWinForm\说明.txt" />
     <Content Include="Resources\bg.bmp" />
     <Content Include="Resources\Cancel.bmp" />
