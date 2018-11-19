@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCC14D35-356C-44F0-82FE-28F19FBFE2E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KB.Module</RootNamespace>
+    <AssemblyName>KB.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Base0073.cs" />
+    <Compile Include="Base\Base0073.Designer.cs">
+      <DependentUpon>Base0073.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseCustomer.cs" />
+    <Compile Include="Base\BaseCustomer.designer.cs">
+      <DependentUpon>BaseCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseCustomerLocation.cs" />
+    <Compile Include="Base\BaseCustomerLocation.Designer.cs">
+      <DependentUpon>BaseCustomerLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseCustPart.cs" />
+    <Compile Include="Base\BaseCustPart.designer.cs">
+      <DependentUpon>BaseCustPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseFOB.cs" />
+    <Compile Include="Base\BaseFOB.Designer.cs">
+      <DependentUpon>BaseFOB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseProductionRoute.cs" />
+    <Compile Include="Base\BaseProductionRoute.designer.cs">
+      <DependentUpon>BaseProductionRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseSalesOrder.cs" />
+    <Compile Include="Base\BaseSalesOrder.designer.cs">
+      <DependentUpon>BaseSalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseUnit.cs" />
+    <Compile Include="Base\BaseUnit.Designer.cs">
+      <DependentUpon>BaseUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseWorkOrder.cs" />
+    <Compile Include="Base\BaseWorkOrder.Designer.cs">
+      <DependentUpon>BaseWorkOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormApprovalRoute.cs" />
+    <Compile Include="Base\FormApprovalRoute.designer.cs">
+      <DependentUpon>FormApprovalRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormEmployee.cs" />
+    <Compile Include="Base\FormEmployee.designer.cs">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormEngineeringDepartments.cs" />
+    <Compile Include="Base\FormEngineeringDepartments.designer.cs">
+      <DependentUpon>FormEngineeringDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormEquipment.cs" />
+    <Compile Include="Base\FormEquipment.Designer.cs">
+      <DependentUpon>FormEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormInvPart.cs" />
+    <Compile Include="Base\FormInvPart.Designer.cs">
+      <DependentUpon>FormInvPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormLocation.cs" />
+    <Compile Include="Base\FormLocation.Designer.cs">
+      <DependentUpon>FormLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormMaintenanceOrders.cs" />
+    <Compile Include="Base\FormMaintenanceOrders.designer.cs">
+      <DependentUpon>FormMaintenanceOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormMaterialRejects.cs" />
+    <Compile Include="Base\FormMaterialRejects.Designer.cs">
+      <DependentUpon>FormMaterialRejects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormMir.cs" />
+    <Compile Include="Base\FormMir.designer.cs">
+      <DependentUpon>FormMir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormMirForMaintenanceOrder.cs" />
+    <Compile Include="Base\FormMirForMaintenanceOrder.Designer.cs">
+      <DependentUpon>FormMirForMaintenanceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormNotePad.cs" />
+    <Compile Include="Base\FormNotePad.Designer.cs">
+      <DependentUpon>FormNotePad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormNotePadLibrary.cs" />
+    <Compile Include="Base\FormNotePadLibrary.Designer.cs">
+      <DependentUpon>FormNotePadLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormParameter.cs" />
+    <Compile Include="Base\FormParameter.Designer.cs">
+      <DependentUpon>FormParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormProductionParameter.cs" />
+    <Compile Include="Base\FormProductionParameter.Designer.cs">
+      <DependentUpon>FormProductionParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormProductionReject.cs" />
+    <Compile Include="Base\FormProductionReject.Designer.cs">
+      <DependentUpon>FormProductionReject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormProductionResource.cs" />
+    <Compile Include="Base\FormProductionResource.Designer.cs">
+      <DependentUpon>FormProductionResource.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormRejectReason.cs" />
+    <Compile Include="Base\FormRejectReason.Designer.cs">
+      <DependentUpon>FormRejectReason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormReplenishmentOrder.cs" />
+    <Compile Include="Base\FormReplenishmentOrder.Designer.cs">
+      <DependentUpon>FormReplenishmentOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormReportViewer.cs" />
+    <Compile Include="Base\FormReportViewer.Designer.cs">
+      <DependentUpon>FormReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormRouteStep.cs" />
+    <Compile Include="Base\FormRouteStep.Designer.cs">
+      <DependentUpon>FormRouteStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormShippingMethod.cs" />
+    <Compile Include="Base\FormShippingMethod.Designer.cs">
+      <DependentUpon>FormShippingMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormSupplier.cs" />
+    <Compile Include="Base\FormSupplier.Designer.cs">
+      <DependentUpon>FormSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FormWarehouse.cs" />
+    <Compile Include="Base\FormWarehouse.Designer.cs">
+      <DependentUpon>FormWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildModule.cs" />
+    <Compile Include="ChildModule.Designer.cs">
+      <DependentUpon>ChildModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Control\ControlButton.cs" />
+    <Compile Include="Control\ControlButton.Designer.cs">
+      <DependentUpon>ControlButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViewEx\DataGridViewComboBoxColumnEx.cs" />
+    <Compile Include="DataGridViewEx\DataGridViewEx.cs" />
+    <Compile Include="MainModule.cs" />
+    <Compile Include="MainModule.Designer.cs">
+      <DependentUpon>MainModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinFormModule.cs" />
+    <Compile Include="PopWinFormModule.Designer.cs">
+      <DependentUpon>PopWinFormModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmApproval.cs" />
+    <Compile Include="PopWinForm\BL\FrmApproval.Designer.cs">
+      <DependentUpon>FrmApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0002.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0002.Designer.cs">
+      <DependentUpon>FrmData0002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0005.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0005.Designer.cs">
+      <DependentUpon>FrmData0005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0008.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0008.Designer.cs">
+      <DependentUpon>FrmData0008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0010.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0010.Designer.cs">
+      <DependentUpon>FrmData0010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0013.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0013.Designer.cs">
+      <DependentUpon>FrmData0013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0015.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0015.Designer.cs">
+      <DependentUpon>FrmData0015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0016.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0016.Designer.cs">
+      <DependentUpon>FrmData0016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0017.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0017.Designer.cs">
+      <DependentUpon>FrmData0017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0017Inv.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0017Inv.Designer.cs">
+      <DependentUpon>FrmData0017Inv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0017SemiInv.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0017SemiInv.Designer.cs">
+      <DependentUpon>FrmData0017SemiInv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0017_WH.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0017_WH.Designer.cs">
+      <DependentUpon>FrmData0017_WH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0017_WH2.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0017_WH2.Designer.cs">
+      <DependentUpon>FrmData0017_WH2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0023.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0023.Designer.cs">
+      <DependentUpon>FrmData0023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0034.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0034.Designer.cs">
+      <DependentUpon>FrmData0034.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0035.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0035.Designer.cs">
+      <DependentUpon>FrmData0035.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0036.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0036.Designer.cs">
+      <DependentUpon>FrmData0036.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0037.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0037.Designer.cs">
+      <DependentUpon>FrmData0037.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0038.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0038.Designer.cs">
+      <DependentUpon>FrmData0038.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0050Cust.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0050Cust.Designer.cs">
+      <DependentUpon>FrmData0050Cust.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0050Sales.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0050Sales.Designer.cs">
+      <DependentUpon>FrmData0050Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0103.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0103.Designer.cs">
+      <DependentUpon>FrmData0103.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0193.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0193.Designer.cs">
+      <DependentUpon>FrmData0193.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0469.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0469.Designer.cs">
+      <DependentUpon>FrmData0469.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0497.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0497.Designer.cs">
+      <DependentUpon>FrmData0497.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmData0583.cs" />
+    <Compile Include="PopWinForm\BL\FrmData0583.Designer.cs">
+      <DependentUpon>FrmData0583.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmDate.cs" />
+    <Compile Include="PopWinForm\BL\FrmDate.Designer.cs">
+      <DependentUpon>FrmDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmHTTP.cs" />
+    <Compile Include="PopWinForm\BL\FrmHTTP.Designer.cs">
+      <DependentUpon>FrmHTTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\BL\FrmNotepad.cs" />
+    <Compile Include="PopWinForm\BL\FrmNotepad.Designer.cs">
+      <DependentUpon>FrmNotepad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopWinForm\DL\FrmApprovalDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0002DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0005DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0008DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0010DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0013DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0015DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0016DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0017DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0017InvDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0017SemiInvDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0017_WH2DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0017_WHDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0023DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0034DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0035DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0036DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0037DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0038DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0050CustDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0050SalesDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0103DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0193DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0469DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0497DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmData0583DL.cs" />
+    <Compile Include="PopWinForm\DL\FrmDateDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmHTTPDL.cs" />
+    <Compile Include="PopWinForm\DL\FrmNotepadDL.cs" />
+    <Compile Include="PopWinForm\IL\FrmApprovalIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0002IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0005IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0008IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0010IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0013IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0015IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0016IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0017IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0017InvIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0017SemiInvIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0017_WH2IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0017_WHIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0023IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0034IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0035IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0036IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0037IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0038IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0050CustIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0050SalesIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0103IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0193IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0469IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0497IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmData0583IL.cs" />
+    <Compile Include="PopWinForm\IL\FrmDateIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmHTTPIL.cs" />
+    <Compile Include="PopWinForm\IL\FrmNotepadIL.cs" />
+    <Compile Include="PrintHelper\RDLReport.cs" />
+    <Compile Include="PrintHelper\ReportPrintDocument.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remote\FrmPrintView.cs" />
+    <Compile Include="Remote\FrmPrintView.designer.cs">
+      <DependentUpon>FrmPrintView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\Base0073.resx">
+      <DependentUpon>Base0073.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseCustomer.resx">
+      <DependentUpon>BaseCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseCustomerLocation.resx">
+      <DependentUpon>BaseCustomerLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseCustPart.resx">
+      <DependentUpon>BaseCustPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseFOB.resx">
+      <DependentUpon>BaseFOB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseProductionRoute.resx">
+      <DependentUpon>BaseProductionRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseSalesOrder.resx">
+      <DependentUpon>BaseSalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseUnit.resx">
+      <DependentUpon>BaseUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseWorkOrder.resx">
+      <DependentUpon>BaseWorkOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormApprovalRoute.resx">
+      <DependentUpon>FormApprovalRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormEmployee.resx">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormEngineeringDepartments.resx">
+      <DependentUpon>FormEngineeringDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormEquipment.resx">
+      <DependentUpon>FormEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormInvPart.resx">
+      <DependentUpon>FormInvPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormLocation.resx">
+      <DependentUpon>FormLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormMaintenanceOrders.resx">
+      <DependentUpon>FormMaintenanceOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormMaterialRejects.resx">
+      <DependentUpon>FormMaterialRejects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormMir.resx">
+      <DependentUpon>FormMir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormMirForMaintenanceOrder.resx">
+      <DependentUpon>FormMirForMaintenanceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormNotePad.resx">
+      <DependentUpon>FormNotePad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormNotePadLibrary.resx">
+      <DependentUpon>FormNotePadLibrary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormParameter.resx">
+      <DependentUpon>FormParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormProductionParameter.resx">
+      <DependentUpon>FormProductionParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormProductionReject.resx">
+      <DependentUpon>FormProductionReject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormProductionResource.resx">
+      <DependentUpon>FormProductionResource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormRejectReason.resx">
+      <DependentUpon>FormRejectReason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormReplenishmentOrder.resx">
+      <DependentUpon>FormReplenishmentOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormReportViewer.resx">
+      <DependentUpon>FormReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormRouteStep.resx">
+      <DependentUpon>FormRouteStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormShippingMethod.resx">
+      <DependentUpon>FormShippingMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormSupplier.resx">
+      <DependentUpon>FormSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FormWarehouse.resx">
+      <DependentUpon>FormWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildModule.resx">
+      <DependentUpon>ChildModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\ControlButton.resx">
+      <DependentUpon>ControlButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainModule.resx">
+      <DependentUpon>MainModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinFormModule.resx">
+      <DependentUpon>PopWinFormModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmApproval.resx">
+      <DependentUpon>FrmApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0002.resx">
+      <DependentUpon>FrmData0002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0005.resx">
+      <DependentUpon>FrmData0005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0008.resx">
+      <DependentUpon>FrmData0008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0010.resx">
+      <DependentUpon>FrmData0010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0013.resx">
+      <DependentUpon>FrmData0013.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0015.resx">
+      <DependentUpon>FrmData0015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0016.resx">
+      <DependentUpon>FrmData0016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0017.resx">
+      <DependentUpon>FrmData0017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0017Inv.resx">
+      <DependentUpon>FrmData0017Inv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0017SemiInv.resx">
+      <DependentUpon>FrmData0017SemiInv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0017_WH.resx">
+      <DependentUpon>FrmData0017_WH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0017_WH2.resx">
+      <DependentUpon>FrmData0017_WH2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0023.resx">
+      <DependentUpon>FrmData0023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0034.resx">
+      <DependentUpon>FrmData0034.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0035.resx">
+      <DependentUpon>FrmData0035.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0036.resx">
+      <DependentUpon>FrmData0036.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0037.resx">
+      <DependentUpon>FrmData0037.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0038.resx">
+      <DependentUpon>FrmData0038.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0050Cust.resx">
+      <DependentUpon>FrmData0050Cust.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0050Sales.resx">
+      <DependentUpon>FrmData0050Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0103.resx">
+      <DependentUpon>FrmData0103.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0193.resx">
+      <DependentUpon>FrmData0193.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0469.resx">
+      <DependentUpon>FrmData0469.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0497.resx">
+      <DependentUpon>FrmData0497.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmData0583.resx">
+      <DependentUpon>FrmData0583.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmDate.resx">
+      <DependentUpon>FrmDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmHTTP.resx">
+      <DependentUpon>FrmHTTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopWinForm\BL\FrmNotepad.resx">
+      <DependentUpon>FrmNotepad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Remote\FrmPrintView.resx">
+      <DependentUpon>FrmPrintView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PopWinForm\说明.txt" />
+    <Content Include="Resources\bg.bmp" />
+    <Content Include="Resources\Cancel.bmp" />
+    <Content Include="Resources\Choose.bmp" />
+    <Content Include="Resources\Choose2.bmp" />
+    <Content Include="Resources\Exit.bmp" />
+    <Content Include="Resources\print.jpg" />
+    <Content Include="Resources\Route.bmp" />
+    <Content Include="Resources\Route1.bmp" />
+    <Content Include="Resources\Route2.bmp" />
+    <Content Include="Resources\Route3.bmp" />
+    <Content Include="Resources\Route4.bmp" />
+    <Content Include="Resources\Route5.bmp" />
+    <Content Include="Resources\Save.bmp" />
+    <Content Include="Resources\Thtree.gif" />
+    <Content Include="Resources\Twotree.gif" />
+    <Content Include="Resources\取消按钮.png" />
+    <Content Include="Resources\批量查询.jpg" />
+    <Content Include="Resources\控制代码.jpg" />
+    <Content Include="Resources\生产控制.jpg" />
+    <Content Include="Resources\生产流程.jpg" />
+    <Content Include="Resources\生产流程参数资料库.jpg" />
+    <Content Include="Resources\生产流程指令资料库.jpg" />
+    <Content Include="Resources\生产资源.jpg" />
+    <Content Include="Resources\生产资源日历.jpg" />
+    <Content Include="Resources\生产部件参数.jpg" />
+    <Content Include="Resources\确定按钮.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
