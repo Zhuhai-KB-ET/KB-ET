@@ -1,4 +1,4 @@
-﻿namespace FOUNDERPCB.Module.PopWinForm
+﻿namespace KB.Module.PopWinForm
 {
     partial class FrmApproval
     {

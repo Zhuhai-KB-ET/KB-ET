@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
-    public partial class FormRejectReason : FOUNDERPCB.Module.ChildModule
+    public partial class FormRejectReason : KB.Module.ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0076> list = null;
-        public FOUNDERPCB.Models.DATA0076 data0076 = null;
+        List<KB.Models.DATA0076> list = null;
+        public KB.Models.DATA0076 data0076 = null;
 
         public FormRejectReason()
         {
@@ -25,16 +25,16 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0076BLL bll = new FOUNDERPCB.BLL.DATA0076BLL(db);
-                list = (List<FOUNDERPCB.Models.DATA0076>)bll.FindBySql(" code like '%" + textBoxRejCode.Text.Trim() + "%' order by code");
+                KB.BLL.DATA0076BLL bll = new KB.BLL.DATA0076BLL(db);
+                list = (List<KB.Models.DATA0076>)bll.FindBySql(" code like '%" + textBoxRejCode.Text.Trim() + "%' order by code");
                 dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

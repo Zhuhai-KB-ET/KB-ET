@@ -5,15 +5,15 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.BLL;
-using FOUNDERPCB.Models;
+using KB.BLL;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormInvPart : ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0017> data0017List = null;
-        public FOUNDERPCB.Models.DATA0017 inventory = null;
+        List<KB.Models.DATA0017> data0017List = null;
+        public KB.Models.DATA0017 inventory = null;
         public decimal Data0017Ptr = 0;
 
         public string where = string.Empty;
@@ -46,10 +46,10 @@ namespace FOUNDERPCB.Module.Base
 
         protected void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0017BLL data0017BLL = new FOUNDERPCB.BLL.DATA0017BLL(db);
+                KB.BLL.DATA0017BLL data0017BLL = new KB.BLL.DATA0017BLL(db);
 
                 string sqlWhere = string.Format(" (inv_part_number like '%{0}%' or inv_part_description like '%{0}%') ", textBox1.Text.Trim());
                 if (where.Length > 0)
@@ -61,13 +61,13 @@ namespace FOUNDERPCB.Module.Base
                     sqlWhere = sqlWhere + orderBy;
                 }
 
-                data0017List = (List<FOUNDERPCB.Models.DATA0017>)data0017BLL.FindBySql(sqlWhere, topNum);
+                data0017List = (List<KB.Models.DATA0017>)data0017BLL.FindBySql(sqlWhere, topNum);
                 dataGridView1.AutoGenerateColumns = false;
                 dataGridView1.DataSource = data0017List;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally
@@ -80,7 +80,7 @@ namespace FOUNDERPCB.Module.Base
         {
             if (dataGridView1.CurrentCell != null && dataGridView1.CurrentCell.RowIndex >= 0)
             {
-                FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+                KB.DAL.DBHelper db = new KB.DAL.DBHelper();
                 try
                 {
                     Data0017Ptr = decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -91,7 +91,7 @@ namespace FOUNDERPCB.Module.Base
                 }
                 catch (Exception ex)
                 {
-                    FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                    KB.FUNC.log.RecordInfo(ex);
                     MessageBox.Show(ex.ToString());
                 }
                 finally

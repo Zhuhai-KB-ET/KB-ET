@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.PopWinForm
+namespace KB.Module.PopWinForm
 {
-    public partial class FrmApproval : FOUNDERPCB.Module.ChildModule
+    public partial class FrmApproval : KB.Module.ChildModule
     {
         #region 参数
         //data0011RKEY
@@ -31,7 +31,7 @@ namespace FOUNDERPCB.Module.PopWinForm
         #region FrmApproval_Load
         private void FrmApproval_Load(object sender, EventArgs e)
         {
-            frmApprovalIL = new FOUNDERPCB.Module.PopWinForm.IL.FrmApprovalIL(this);
+            frmApprovalIL = new KB.Module.PopWinForm.IL.FrmApprovalIL(this);
 
             frmApprovalIL.FrmNotepad_Load(sender, e);
         }

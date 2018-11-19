@@ -4,12 +4,12 @@ using System.Text;
 using System.Data;
 using System.Drawing; 
 using System.Windows.Forms;
-using FOUNDERPCB.FUNC;
-using FOUNDERPCB.DAL;
-using FOUNDERPCB.Models;
-using FOUNDERPCB.BLL;
+using KB.FUNC;
+using KB.DAL;
+using KB.Models;
+using KB.BLL;
 
-namespace FOUNDERPCB.Module.PopWinForm.DL
+namespace KB.Module.PopWinForm.DL
 {
     /// <summary>
     /// 数据层

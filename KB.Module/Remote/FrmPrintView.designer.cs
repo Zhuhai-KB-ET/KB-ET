@@ -1,4 +1,4 @@
-﻿namespace FOUNDERPCB.Module.Remotes
+﻿namespace KB.Module.Remotes
 {
     partial class FrmPrintView
     {

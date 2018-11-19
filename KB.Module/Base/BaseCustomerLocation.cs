@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
-using FOUNDERPCB.BLL;
-using FOUNDERPCB.DAL;
+using KB.Models;
+using KB.BLL;
+using KB.DAL;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class BaseCustomerLocation : ChildModule
     {

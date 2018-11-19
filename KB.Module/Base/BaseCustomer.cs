@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class BaseCustomer : ChildModule
     {
-        public FOUNDERPCB.Models.DATA0010 d10info = null;
-        public IList<FOUNDERPCB.Models.DATA0010> list = null;
+        public KB.Models.DATA0010 d10info = null;
+        public IList<KB.Models.DATA0010> list = null;
         public string CustomerCode = "";
         public BaseCustomer()
         {
@@ -45,13 +45,13 @@ namespace FOUNDERPCB.Module.Base
             }
             try
             {
-                FOUNDERPCB.BLL.DATA0010BLL d10bll = new FOUNDERPCB.BLL.DATA0010BLL(this);
+                KB.BLL.DATA0010BLL d10bll = new KB.BLL.DATA0010BLL(this);
                 list = d10bll.FindBySql(iswhere);
                 dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.Message);
             }
         }

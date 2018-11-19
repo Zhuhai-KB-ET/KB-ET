@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormNotePadLibrary : ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0013> data0013List = null;
-        public FOUNDERPCB.Models.DATA0013 data0013 = null;
+        List<KB.Models.DATA0013> data0013List = null;
+        public KB.Models.DATA0013 data0013 = null;
 
         public FormNotePadLibrary()
         {
@@ -20,11 +20,11 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0013BLL bll = new FOUNDERPCB.BLL.DATA0013BLL(db);
-                data0013List = (List<FOUNDERPCB.Models.DATA0013>)bll.FindBySql(" NP_CODE like '%" + textBox1.Text.Trim() + "%'");
+                KB.BLL.DATA0013BLL bll = new KB.BLL.DATA0013BLL(db);
+                data0013List = (List<KB.Models.DATA0013>)bll.FindBySql(" NP_CODE like '%" + textBox1.Text.Trim() + "%'");
                 var list = new List<D13Item>();
                 foreach (var d13 in data0013List)
                 {
@@ -48,7 +48,7 @@ namespace FOUNDERPCB.Module.Base
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

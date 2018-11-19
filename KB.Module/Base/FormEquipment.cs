@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormEquipment : ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0161> list = null;
-        public FOUNDERPCB.Models.DATA0161 data0161 = null;
+        List<KB.Models.DATA0161> list = null;
+        public KB.Models.DATA0161 data0161 = null;
 
         public FormEquipment()
         {
@@ -26,16 +26,16 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0161BLL bll = new FOUNDERPCB.BLL.DATA0161BLL(db);
-                list = (List<FOUNDERPCB.Models.DATA0161>)bll.FindBySql(" EQUIPMENT_NAME like '%" + textBoxCode.Text.Trim() + "%'");
+                KB.BLL.DATA0161BLL bll = new KB.BLL.DATA0161BLL(db);
+                list = (List<KB.Models.DATA0161>)bll.FindBySql(" EQUIPMENT_NAME like '%" + textBoxCode.Text.Trim() + "%'");
                 dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

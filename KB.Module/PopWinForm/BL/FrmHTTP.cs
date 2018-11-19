@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.PopWinForm
+namespace KB.Module.PopWinForm
 {
-    public partial class FrmHTTP : FOUNDERPCB.Module.ChildModule
+    public partial class FrmHTTP : KB.Module.ChildModule
     {
         #region 创建窗口
         IL.FrmHTTPIL frmHTTPIL = null;
@@ -21,7 +21,7 @@ namespace FOUNDERPCB.Module.PopWinForm
         #region FrmHTTP_Load
         private void FrmHTTP_Load(object sender, EventArgs e)
         {
-            frmHTTPIL = new FOUNDERPCB.Module.PopWinForm.IL.FrmHTTPIL(this);
+            frmHTTPIL = new KB.Module.PopWinForm.IL.FrmHTTPIL(this);
 
             frmHTTPIL.FrmHTTP_Load(sender, e);
         }

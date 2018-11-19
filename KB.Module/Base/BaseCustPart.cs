@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class BaseCustPart : ChildModule
     {
         #region 字段
-        public FOUNDERPCB.Models.DATA0050 d50info = null;
-        public IList<FOUNDERPCB.Models.DATA0050> list=null;
+        public KB.Models.DATA0050 d50info = null;
+        public IList<KB.Models.DATA0050> list=null;
         public string PartNumber = "";
         public decimal Data0010Rkey = 0;
         public string SqlWhere = "";
@@ -100,8 +100,8 @@ namespace FOUNDERPCB.Module.Base
             }
             try
             {
-                FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
-                FOUNDERPCB.BLL.DATA0050BLL d50bll = new FOUNDERPCB.BLL.DATA0050BLL(db);
+                KB.DAL.DBHelper db = new KB.DAL.DBHelper();
+                KB.BLL.DATA0050BLL d50bll = new KB.BLL.DATA0050BLL(db);
                 list = d50bll.FindBySql(iswhere);
                 if (list.Count < 1)
                 {
@@ -115,7 +115,7 @@ namespace FOUNDERPCB.Module.Base
             }
             catch (Exception ee)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ee);
+                KB.FUNC.log.RecordInfo(ee);
                 MessageBox.Show(ee.Message);
             }
            

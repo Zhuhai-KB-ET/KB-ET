@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormProductionParameter : ChildModule
     {
@@ -34,8 +34,8 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
-            FOUNDERPCB.BLL.DATA0035BLL bll = new FOUNDERPCB.BLL.DATA0035BLL(db);
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
+            KB.BLL.DATA0035BLL bll = new KB.BLL.DATA0035BLL(db);
             var data = bll.GetModelList(" PRODUCTION_PARAMETER like '%" + txtName.Text.Trim() + "%'");
             dataGridView1.DataSource = data;
         }

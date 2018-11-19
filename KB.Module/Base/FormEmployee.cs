@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormEmployee : ChildModule
     {
@@ -21,16 +21,16 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0005BLL bll = new FOUNDERPCB.BLL.DATA0005BLL(db);
-                data0005List = (List<FOUNDERPCB.Models.DATA0005>)bll.FindBySql(" empl_code like '%" + textBoxCode.Text.Trim() + "%' or employee_name like '%" + textBoxCode.Text.Trim() + "%'");
+                KB.BLL.DATA0005BLL bll = new KB.BLL.DATA0005BLL(db);
+                data0005List = (List<KB.Models.DATA0005>)bll.FindBySql(" empl_code like '%" + textBoxCode.Text.Trim() + "%' or employee_name like '%" + textBoxCode.Text.Trim() + "%'");
                 dataGridView1.DataSource = data0005List;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

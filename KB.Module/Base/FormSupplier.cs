@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
-    public partial class FormSupplier : FOUNDERPCB.Module.ChildModule
+    public partial class FormSupplier : KB.Module.ChildModule
     {
-        IList<FOUNDERPCB.Models.DATA0023> list = null;
-        public FOUNDERPCB.Models.DATA0023 Supplier = null;
+        IList<KB.Models.DATA0023> list = null;
+        public KB.Models.DATA0023 Supplier = null;
         public string SqlWhere = string.Empty;
         public FormSupplier()
         {
@@ -30,10 +30,10 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0023BLL bll = new FOUNDERPCB.BLL.DATA0023BLL(db);
+                KB.BLL.DATA0023BLL bll = new KB.BLL.DATA0023BLL(db);
                 if (SqlWhere.Length > 0)
                 {
                     list = bll.GetEntityByCode(textBoxSupplierCode.Text.Trim(), SqlWhere);
@@ -46,7 +46,7 @@ namespace FOUNDERPCB.Module.Base
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

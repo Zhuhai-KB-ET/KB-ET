@@ -8,10 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 using PrintHelper;
-using FOUNDERPCB.DAL;
-using FOUNDERPCB.Models;
+using KB.DAL;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Remotes
+namespace KB.Module.Remotes
 {
     public partial class FrmPrintView : Form
     {
@@ -46,11 +46,11 @@ namespace FOUNDERPCB.Module.Remotes
            try
            {
                DBHelper db = new DBHelper();
-               FOUNDERPCB.Models.RPT_SETPARM info = new FOUNDERPCB.Models.RPT_SETPARM();
+               KB.Models.RPT_SETPARM info = new KB.Models.RPT_SETPARM();
                // FOUNDERPCB.BLL. bll = new FOUNDERPCB.Models.RPT_SETPARM(db);
-               FOUNDERPCB.BLL.RPT_SETPARMBLL bll = new FOUNDERPCB.BLL.RPT_SETPARMBLL(db);
-               FOUNDERPCB.Models.RPT_SERVERPATH info1 = new FOUNDERPCB.Models.RPT_SERVERPATH();
-               FOUNDERPCB.BLL.RPT_SERVERPATHBLL bll1 = new FOUNDERPCB.BLL.RPT_SERVERPATHBLL(db);
+               KB.BLL.RPT_SETPARMBLL bll = new KB.BLL.RPT_SETPARMBLL(db);
+               KB.Models.RPT_SERVERPATH info1 = new KB.Models.RPT_SERVERPATH();
+               KB.BLL.RPT_SERVERPATHBLL bll1 = new KB.BLL.RPT_SERVERPATHBLL(db);
                string sql;
                sql = string.Format(@"select rkey,REPORT_PTR from RPT_QUICKREPORT_LINK where FROM_NAME='{0}' AND REPORT_NAME='{1}'", formName, reportCode);
                DataTable dt = new DataTable();

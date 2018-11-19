@@ -6,13 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class BaseProductionRoute : ChildModule
     {
         #region 字段
-        public FOUNDERPCB.Models.DATA0037 d37info = null;//返回结果集
-        public IList<FOUNDERPCB.Models.DATA0037> list = null;
+        public KB.Models.DATA0037 d37info = null;//返回结果集
+        public IList<KB.Models.DATA0037> list = null;
         public string PROD_ROUTE_CODE = "";//流程代码 ，传入值
         #endregion
         public BaseProductionRoute()
@@ -50,13 +50,13 @@ namespace FOUNDERPCB.Module.Base
             iswhere += " and ACTIVE_FLAG !=0 ";
             try
             {
-                FOUNDERPCB.BLL.DATA0037BLL d37bll = new FOUNDERPCB.BLL.DATA0037BLL(this);
+                KB.BLL.DATA0037BLL d37bll = new KB.BLL.DATA0037BLL(this);
                 list = d37bll.FindBySql(iswhere);
                 dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.Message);
             }
 

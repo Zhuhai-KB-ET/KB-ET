@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormMaterialRejects : ChildModule
     {
@@ -31,16 +31,16 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0076BLL bll = new FOUNDERPCB.BLL.DATA0076BLL(db);
-                data0076List = (List<FOUNDERPCB.Models.DATA0076>)bll.FindBySql(" CODE like '%" + textBoxCode.Text.Trim() + "%'");
+                KB.BLL.DATA0076BLL bll = new KB.BLL.DATA0076BLL(db);
+                data0076List = (List<KB.Models.DATA0076>)bll.FindBySql(" CODE like '%" + textBoxCode.Text.Trim() + "%'");
                 dataGridView1.DataSource = data0076List;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

@@ -5,12 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.BLL;
-using FOUNDERPCB.Models;
+using KB.BLL;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
-    public partial class FormProductionReject : FOUNDERPCB.Module.ChildModule
+    public partial class FormProductionReject : KB.Module.ChildModule
     {
         /// <summary>
         /// 报废/退回的类型 R:报废.D:退回
@@ -36,18 +36,18 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = null;
+            KB.DAL.DBHelper db = null;
             try
             {
-                db = new FOUNDERPCB.DAL.DBHelper();
-                FOUNDERPCB.BLL.DATA0039BLL bll = new FOUNDERPCB.BLL.DATA0039BLL(db);
+                db = new KB.DAL.DBHelper();
+                KB.BLL.DATA0039BLL bll = new KB.BLL.DATA0039BLL(db);
                 string sqlWhere = " REJECT_DEFECT_FLAG = '{0}' and (REJ_CODE like '%{1}%' or REJECT_DESCRIPTION like '%{1}%')";
                 list = (List<DATA0039>)bll.FindBySql(string.Format(sqlWhere, RejectType, txtUserInput.Text.Trim()));
                 dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

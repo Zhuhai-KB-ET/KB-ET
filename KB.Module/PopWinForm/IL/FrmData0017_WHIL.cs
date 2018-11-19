@@ -4,10 +4,10 @@ using System.Text;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using FOUNDERPCB.FUNC;
-using FOUNDERPCB.DAL;
+using KB.FUNC;
+using KB.DAL;
 
-namespace FOUNDERPCB.Module.PopWinForm.IL
+namespace KB.Module.PopWinForm.IL
 {
     /// <summary>
     /// 业务中间层
@@ -29,7 +29,7 @@ namespace FOUNDERPCB.Module.PopWinForm.IL
         {
             try
             {
-                FrmData0017_WHDL = new FOUNDERPCB.Module.PopWinForm.DL.FrmData0017_WHDL(Frm);
+                FrmData0017_WHDL = new KB.Module.PopWinForm.DL.FrmData0017_WHDL(Frm);
 
                 Frm.textBoxFind.CharacterCasing = CharacterCasing.Upper;
 

@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.DAL;
-using FOUNDERPCB.Models;
-using FOUNDERPCB.BLL;
+using KB.DAL;
+using KB.Models;
+using KB.BLL;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class BaseSalesOrder : ChildModule
     {
@@ -60,7 +60,7 @@ namespace FOUNDERPCB.Module.Base
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.Message);
             }
         }

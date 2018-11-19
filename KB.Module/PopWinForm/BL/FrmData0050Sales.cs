@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.PopWinForm
+namespace KB.Module.PopWinForm
 {
     /// <summary>
     /// 界面层
     /// </summary>
-    public partial class FrmData0050Sales : FOUNDERPCB.Module.PopWinFormModule
+    public partial class FrmData0050Sales : KB.Module.PopWinFormModule
     {
         #region 参数
         public string is_CustCode = "";
@@ -29,7 +29,7 @@ namespace FOUNDERPCB.Module.PopWinForm
         #region FrmData0050Sales_Load
         private void FrmData0050Sales_Load(object sender, EventArgs e)
         {
-            frmData0050SalesIL = new FOUNDERPCB.Module.PopWinForm.IL.FrmData0050SalesIL(this);
+            frmData0050SalesIL = new KB.Module.PopWinForm.IL.FrmData0050SalesIL(this);
 
             frmData0050SalesIL.FrmData0050Sales_Load(sender, e);
         }

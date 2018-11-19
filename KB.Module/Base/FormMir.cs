@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
-using FOUNDERPCB.BLL;
+using KB.Models;
+using KB.BLL;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormMir : ChildModule
     {
@@ -42,7 +42,7 @@ namespace FOUNDERPCB.Module.Base
         {
             if (dataGridView1.CurrentCell != null && e.RowIndex >= 0)
             {
-                FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+                KB.DAL.DBHelper db = new KB.DAL.DBHelper();
                 DATA0555BLL bll = new DATA0555BLL(db);
 
                 Data0555 = bll.getDATA0555ByRKEY(decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()));
@@ -79,7 +79,7 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
                 DATA0555BLL bll = new DATA0555BLL(db);
@@ -87,7 +87,7 @@ namespace FOUNDERPCB.Module.Base
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally
@@ -143,7 +143,7 @@ namespace FOUNDERPCB.Module.Base
             {
                 if (dataGridView1.CurrentCell != null && dataGridView1.CurrentCell.RowIndex >= 0)
                 {
-                    FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+                    KB.DAL.DBHelper db = new KB.DAL.DBHelper();
                     DATA0555BLL bll = new DATA0555BLL(db);
 
                     Data0555 = bll.getDATA0555ByRKEY(decimal.Parse(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString()));

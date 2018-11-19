@@ -1,4 +1,4 @@
-﻿namespace FOUNDERPCB.Module
+﻿namespace KB.Module
 {
     partial class ChildModule
     {

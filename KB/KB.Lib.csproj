@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,6 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Approval_Mode_1BLL.cs" />
+    <Compile Include="BLL\Approval_Mode_2BLL.cs" />
+    <Compile Include="BLL\Approval_Mode_3BLL.cs" />
+    <Compile Include="BLL\Approval_Mode_4BLL.cs" />
+    <Compile Include="BLL\Approval_Mode_NoteBLL.cs" />
+    <Compile Include="BLL\GEN\DATA0001BLL.cs" />
+    <Compile Include="BLL\GEN\DATA0002BLL.cs" />
+    <Compile Include="BLL\GEN\DATA0003BLL.cs" />
+    <Compile Include="BLL\GEN\DATA0004BLL.cs" />
+    <Compile Include="BLL\GEN\DATA0005BLL.cs" />
+    <Compile Include="BLL\GEN\DATA0006BLL.cs" />
+    <Compile Include="DAL\AccessDBDAL.cs" />
+    <Compile Include="DAL\Approval_Mode_1DAL.cs" />
+    <Compile Include="DAL\Approval_Mode_2DAL.cs" />
+    <Compile Include="DAL\Approval_Mode_3DAL.cs" />
+    <Compile Include="DAL\Approval_Mode_4DAL.cs" />
+    <Compile Include="DAL\Approval_Mode_NoteDAL.cs" />
+    <Compile Include="DAL\GEN\DATA0001DAL.cs" />
+    <Compile Include="DAL\GEN\DATA0002DAL.cs" />
+    <Compile Include="DAL\GEN\DATA0003DAL.cs" />
+    <Compile Include="DAL\GEN\DATA0004DAL.cs" />
+    <Compile Include="DAL\GEN\DATA0005DAL.cs" />
+    <Compile Include="DAL\GEN\DATA0006DAL.cs" />
     <Compile Include="DAL\SQLHelper\DBHelper.cs" />
     <Compile Include="FUNC\AD.cs" />
     <Compile Include="FUNC\ApprovalMode.cs" />
@@ -62,6 +87,19 @@
     <Compile Include="FUNC\SysMenu.cs" />
     <Compile Include="FUNC\TimeParser.cs" />
     <Compile Include="FUNC\XmlSource.cs" />
+    <Compile Include="Models\AccessModel.cs" />
+    <Compile Include="Models\ApprovalRoute.cs" />
+    <Compile Include="Models\Approval_Mode_1Info.cs" />
+    <Compile Include="Models\Approval_Mode_2Info.cs" />
+    <Compile Include="Models\Approval_Mode_3Info.cs" />
+    <Compile Include="Models\Approval_Mode_4Info.cs" />
+    <Compile Include="Models\Approval_Mode_NoteInfo.cs" />
+    <Compile Include="Models\GEN\DATA0001.cs" />
+    <Compile Include="Models\GEN\DATA0002.cs" />
+    <Compile Include="Models\GEN\DATA0003.cs" />
+    <Compile Include="Models\GEN\DATA0004.cs" />
+    <Compile Include="Models\GEN\DATA0005.cs" />
+    <Compile Include="Models\GEN\DATA0006.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,9 +123,7 @@
   <ItemGroup>
     <Content Include="FUNC\log_bak.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

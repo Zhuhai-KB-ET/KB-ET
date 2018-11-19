@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormEngineeringDepartments : ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0029> list = null;
-        public FOUNDERPCB.Models.DATA0029 data0029 = null;
+        List<KB.Models.DATA0029> list = null;
+        public KB.Models.DATA0029 data0029 = null;
         /// <summary>
         /// 当前工厂的信息
         /// </summary>
@@ -34,13 +34,13 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0029BLL bll = new FOUNDERPCB.BLL.DATA0029BLL(db);
+                KB.BLL.DATA0029BLL bll = new KB.BLL.DATA0029BLL(db);
                 if (!showExpendedData)
                 {
-                    list = (List<FOUNDERPCB.Models.DATA0029>)bll.FindBySql(" ENGG_DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'");
+                    list = (List<KB.Models.DATA0029>)bll.FindBySql(" ENGG_DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'");
                 }
                 else
                 {
@@ -63,14 +63,14 @@ namespace FOUNDERPCB.Module.Base
                     {
                         throw error;
                     }
-                    list = (List<FOUNDERPCB.Models.DATA0029>)bll.FindBySql(" ENGG_DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'"
+                    list = (List<KB.Models.DATA0029>)bll.FindBySql(" ENGG_DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'"
                                                                             + " AND RKEY IN (select data0029ptr from data0029E) ORDER BY ENGG_DEPT_CODE");
                 }
                 dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally
@@ -81,7 +81,7 @@ namespace FOUNDERPCB.Module.Base
 
         private void FormEngineeringDepartments_Load(object sender, EventArgs e)
         {
-            tb = FOUNDERPCB.FUNC.GlobalVal.GetFactory(FOUNDERPCB.FUNC.GlobalVal.UserInfo.FactoryID);
+            tb = KB.FUNC.GlobalVal.GetFactory(KB.FUNC.GlobalVal.UserInfo.FactoryID);
 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.MultiSelect = false;

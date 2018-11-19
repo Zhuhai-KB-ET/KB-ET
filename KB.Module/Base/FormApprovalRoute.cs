@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormApprovalRoute : ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0497> list = null;
-        public FOUNDERPCB.Models.DATA0497 data0497 = null;
+        List<KB.Models.DATA0497> list = null;
+        public KB.Models.DATA0497 data0497 = null;
 
         decimal type = -1;
 
@@ -28,23 +28,23 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0497BLL bll = new FOUNDERPCB.BLL.DATA0497BLL(db);
+                KB.BLL.DATA0497BLL bll = new KB.BLL.DATA0497BLL(db);
                 if (type == -1)
                 {
-                    list = (List<FOUNDERPCB.Models.DATA0497>)bll.FindBySql(" ACTIVE_FLAG=0 AND APPROVAL_ROUTE_CODE like '%" + textBox1.Text.Trim() + "%'");
+                    list = (List<KB.Models.DATA0497>)bll.FindBySql(" ACTIVE_FLAG=0 AND APPROVAL_ROUTE_CODE like '%" + textBox1.Text.Trim() + "%'");
                 }
                 else
                 {
-                    list = (List<FOUNDERPCB.Models.DATA0497>)bll.FindBySql(" ACTIVE_FLAG=0 AND APPROVAL_ROUTE_CODE like '%" + textBox1.Text.Trim() + "%' and APPROVAL_TYPE =" + type.ToString());
+                    list = (List<KB.Models.DATA0497>)bll.FindBySql(" ACTIVE_FLAG=0 AND APPROVAL_ROUTE_CODE like '%" + textBox1.Text.Trim() + "%' and APPROVAL_TYPE =" + type.ToString());
                 }
                 dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

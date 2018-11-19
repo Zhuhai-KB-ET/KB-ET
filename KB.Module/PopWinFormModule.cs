@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module
+namespace KB.Module
 {
-    public partial class PopWinFormModule : FOUNDERPCB.Module.ChildModule
+    public partial class PopWinFormModule : KB.Module.ChildModule
     {
         #region 创建窗体
         public PopWinFormModule()

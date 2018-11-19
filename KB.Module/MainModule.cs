@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.FUNC;
-using FOUNDERPCB.DAL;
+using KB.FUNC;
+using KB.DAL;
 
-namespace FOUNDERPCB.Module
+namespace KB.Module
 {
     /// <summary>
     /// 模版

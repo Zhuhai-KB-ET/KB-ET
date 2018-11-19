@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormProductionResource : ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0034> list = null;
-        public FOUNDERPCB.Models.DATA0034 data0034 = null;
+        List<KB.Models.DATA0034> list = null;
+        public KB.Models.DATA0034 data0034 = null;
         /// <summary>
         /// 格式 and + 条件
         /// </summary>
@@ -32,7 +32,7 @@ namespace FOUNDERPCB.Module.Base
 
         private void FormProductionResource_Load(object sender, EventArgs e)
         {
-            tb = FOUNDERPCB.FUNC.GlobalVal.GetFactory(FOUNDERPCB.FUNC.GlobalVal.UserInfo.FactoryID);
+            tb = KB.FUNC.GlobalVal.GetFactory(KB.FUNC.GlobalVal.UserInfo.FactoryID);
 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.MultiSelect = false;
@@ -44,13 +44,13 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0034BLL bll = new FOUNDERPCB.BLL.DATA0034BLL(db);
+                KB.BLL.DATA0034BLL bll = new KB.BLL.DATA0034BLL(db);
                 if (!showExpendedData)
                 {
-                    list = (List<FOUNDERPCB.Models.DATA0034>)bll.FindBySql(" DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'  and (ACTIVE_FLAG = 0 OR ACTIVE_FLAG IS NULL)" + SqlWhere);
+                    list = (List<KB.Models.DATA0034>)bll.FindBySql(" DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'  and (ACTIVE_FLAG = 0 OR ACTIVE_FLAG IS NULL)" + SqlWhere);
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace FOUNDERPCB.Module.Base
                             db.ExecuteCommand(execSql);
                         }
                         #endregion
-                        list = (List<FOUNDERPCB.Models.DATA0034>)bll.FindBySql(" DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'  and (ACTIVE_FLAG = 0 OR ACTIVE_FLAG IS NULL)"
+                        list = (List<KB.Models.DATA0034>)bll.FindBySql(" DEPT_CODE like '%" + textBoxCode.Text.Trim() + "%'  and (ACTIVE_FLAG = 0 OR ACTIVE_FLAG IS NULL)"
                                                                                 + " and RKEY IN (select data0034ptr from DATA0034E) "
                                                                                 + SqlWhere + " order by DEPT_CODE");
                     }
@@ -81,7 +81,7 @@ namespace FOUNDERPCB.Module.Base
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

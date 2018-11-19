@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.BLL;
-using FOUNDERPCB.DAL;
-using FOUNDERPCB.Models;
+using KB.BLL;
+using KB.DAL;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class Base0073 : Form
     {

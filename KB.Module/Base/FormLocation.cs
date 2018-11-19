@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
-    public partial class FormLocation : FOUNDERPCB.Module.ChildModule
+    public partial class FormLocation : KB.Module.ChildModule
     {
-        List<FOUNDERPCB.Models.DATA0016> data0016List = null;
-        public FOUNDERPCB.Models.DATA0016 location = null;
+        List<KB.Models.DATA0016> data0016List = null;
+        public KB.Models.DATA0016 location = null;
         decimal data0017Ptr = 0;
 
         public FormLocation()
@@ -27,23 +27,23 @@ namespace FOUNDERPCB.Module.Base
 
         protected void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0016BLL bll = new FOUNDERPCB.BLL.DATA0016BLL(db);
+                KB.BLL.DATA0016BLL bll = new KB.BLL.DATA0016BLL(db);
                 if (data0017Ptr > 0)
                 {
                     data0016List = bll.GetDefaultLocationByInventory(data0017Ptr);
                 }
                 else
                 {
-                    data0016List = (List<FOUNDERPCB.Models.DATA0016>)bll.FindBySql(string.Format(" code like '{0}' or location like '%{0}%'", textBox1.Text.Trim()));
+                    data0016List = (List<KB.Models.DATA0016>)bll.FindBySql(string.Format(" code like '{0}' or location like '%{0}%'", textBox1.Text.Trim()));
                 }
                 dataGridView1.DataSource = data0016List;
             }
             catch (Exception ex)
             {
-                FOUNDERPCB.FUNC.log.RecordInfo(ex);
+                KB.FUNC.log.RecordInfo(ex);
                 MessageBox.Show(ex.ToString());
             }
             finally

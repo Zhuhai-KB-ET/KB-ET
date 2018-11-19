@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormMaintenanceOrders : ChildModule
     {
@@ -30,10 +30,10 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0172BLL bll = new FOUNDERPCB.BLL.DATA0172BLL(db);
+                KB.BLL.DATA0172BLL bll = new KB.BLL.DATA0172BLL(db);
                 var list = (List<DATA0172>)bll.FindBySql(string.Format(" STATUS_OF_MO=4 and MO_NUMBER like '%{0}%' order by MO_NUMBER", textBoxCode.Text.Trim()));
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = list;
@@ -73,10 +73,10 @@ namespace FOUNDERPCB.Module.Base
         {
             if (dataGridView1.CurrentCell != null && e.RowIndex >= 0)
             { 
-                FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+                KB.DAL.DBHelper db = new KB.DAL.DBHelper();
                 try
                 {
-                    FOUNDERPCB.BLL.DATA0172BLL bll = new FOUNDERPCB.BLL.DATA0172BLL(db);
+                    KB.BLL.DATA0172BLL bll = new KB.BLL.DATA0172BLL(db);
                     Data0172 = bll.getDATA0172ByRECORD_KEY_MO(decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()));
 
                     this.DialogResult = DialogResult.OK;

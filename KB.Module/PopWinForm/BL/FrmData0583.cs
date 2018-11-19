@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.PopWinForm
+namespace KB.Module.PopWinForm
 {
-    public partial class FrmData0583 : FOUNDERPCB.Module.ChildModule
+    public partial class FrmData0583 : KB.Module.ChildModule
     {
         #region 参数
         //data0583.SOURCE_PTR
@@ -30,7 +30,7 @@ namespace FOUNDERPCB.Module.PopWinForm
         #region FrmData0583_Load
         private void FrmData0583_Load(object sender, EventArgs e)
         {
-            frmData0583IL = new FOUNDERPCB.Module.PopWinForm.IL.FrmData0583IL(this);
+            frmData0583IL = new KB.Module.PopWinForm.IL.FrmData0583IL(this);
 
             frmData0583IL.FrmData0583_Load(sender, e);
         }

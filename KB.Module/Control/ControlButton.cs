@@ -5,9 +5,9 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.FUNC;
+using KB.FUNC;
 
-namespace FOUNDERPCB.Module
+namespace KB.Module
 {
     public partial class ControlButton : UserControl
     {

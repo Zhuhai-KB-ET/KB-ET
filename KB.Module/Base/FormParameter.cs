@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormParameter : Form
     {
@@ -29,10 +29,10 @@ namespace FOUNDERPCB.Module.Base
             dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.RowHeadersVisible = false;
 
-            FOUNDERPCB.DAL.DBHelper db = null;
+            KB.DAL.DBHelper db = null;
             try
             {
-                db = new FOUNDERPCB.DAL.DBHelper();
+                db = new KB.DAL.DBHelper();
                 tb = db.GetDataSet(string.Format("select distinct {0} as parameter from data0038 where {0} is not null order by {0}", ColumnName));
                 for (int i = tb.Rows.Count - 1; i >= 0; i--)//删除空行
                 {

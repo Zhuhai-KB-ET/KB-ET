@@ -4,10 +4,10 @@ using System.Text;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using FOUNDERPCB.FUNC;
-using FOUNDERPCB.DAL;
+using KB.FUNC;
+using KB.DAL;
 
-namespace FOUNDERPCB.Module.PopWinForm.IL
+namespace KB.Module.PopWinForm.IL
 {
     /// <summary>
     /// 业务中间层

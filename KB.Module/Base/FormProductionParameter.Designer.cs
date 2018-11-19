@@ -1,4 +1,4 @@
-﻿namespace FOUNDERPCB.Module.Base
+﻿namespace KB.Module.Base
 {
     partial class FormProductionParameter
     {

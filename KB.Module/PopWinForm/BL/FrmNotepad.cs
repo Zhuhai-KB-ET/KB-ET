@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.PopWinForm
+namespace KB.Module.PopWinForm
 {
-    public partial class FrmNotepad : FOUNDERPCB.Module.ChildModule
+    public partial class FrmNotepad : KB.Module.ChildModule
     {
         #region 参数
         //data0011RKEY
@@ -30,7 +30,7 @@ namespace FOUNDERPCB.Module.PopWinForm
         #region FrmNotepad_Load
         private void FrmNotepad_Load(object sender, EventArgs e)
         {
-            frmNotepadIL = new FOUNDERPCB.Module.PopWinForm.IL.FrmNotepadIL(this);
+            frmNotepadIL = new KB.Module.PopWinForm.IL.FrmNotepadIL(this);
 
             frmNotepadIL.FrmNotepad_Load(sender, e);
         }

@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
-using FOUNDERPCB.BLL;
+using KB.Models;
+using KB.BLL;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class BaseWorkOrder : ChildModule
     {
@@ -31,7 +31,7 @@ namespace FOUNDERPCB.Module.Base
 
         private void BaseWorkOrder_Load(object sender, EventArgs e)
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
                 d06bll = new DATA0006BLL(db);

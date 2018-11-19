@@ -6,9 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.PopWinForm
+namespace KB.Module.PopWinForm
 {
-    public partial class FrmDate : FOUNDERPCB.Module.ChildModule
+    public partial class FrmDate : KB.Module.ChildModule
     {
         #region FrmDate
         IL.FrmDateIL frmDateIL = null; 
@@ -21,7 +21,7 @@ namespace FOUNDERPCB.Module.PopWinForm
         #region FrmDate_Load
         private void FrmDate_Load(object sender, EventArgs e)
         {
-            frmDateIL = new FOUNDERPCB.Module.PopWinForm.IL.FrmDateIL(this);
+            frmDateIL = new KB.Module.PopWinForm.IL.FrmDateIL(this);
 
             frmDateIL.FrmDate_Load(sender, e);
         }

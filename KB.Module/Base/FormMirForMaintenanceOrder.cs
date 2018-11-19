@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
+using KB.Models;
 
-namespace FOUNDERPCB.Module.Base
+namespace KB.Module.Base
 {
     public partial class FormMirForMaintenanceOrder : ChildModule
     {
@@ -21,10 +21,10 @@ namespace FOUNDERPCB.Module.Base
 
         private void BindData()
         {
-            FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+            KB.DAL.DBHelper db = new KB.DAL.DBHelper();
             try
             {
-                FOUNDERPCB.BLL.DATA0395BLL bll = new FOUNDERPCB.BLL.DATA0395BLL(db);
+                KB.BLL.DATA0395BLL bll = new KB.BLL.DATA0395BLL(db);
                 var tb = bll.QueryMirForMaintenanceOrder(textBoxCode.Text.Trim());
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = tb;
@@ -74,11 +74,11 @@ namespace FOUNDERPCB.Module.Base
         {
             if (dataGridView1.CurrentCell != null && e.RowIndex >= 0)
             {
-                FOUNDERPCB.DAL.DBHelper db = new FOUNDERPCB.DAL.DBHelper();
+                KB.DAL.DBHelper db = new KB.DAL.DBHelper();
                 try
                 {
-                    FOUNDERPCB.BLL.DATA0172BLL data0172BLL = new FOUNDERPCB.BLL.DATA0172BLL(db);
-                    FOUNDERPCB.BLL.DATA0395BLL data0395BLL = new FOUNDERPCB.BLL.DATA0395BLL(db);
+                    KB.BLL.DATA0172BLL data0172BLL = new KB.BLL.DATA0172BLL(db);
+                    KB.BLL.DATA0395BLL data0395BLL = new KB.BLL.DATA0395BLL(db);
                     Data0172 = data0172BLL.getDATA0172ByRECORD_KEY_MO(decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString()));
                     Data0395 = data0395BLL.getDATA0395ByRKEY(decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString()));
 

@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-namespace FOUNDERPCB.Module.Windows.Forms
+namespace KB.Module.Windows.Forms
 {
     /// <summary>
     /// ¿ÉÐÞ¸Ä DropDownStyle µÄ DataGridViewComboBoxColumn

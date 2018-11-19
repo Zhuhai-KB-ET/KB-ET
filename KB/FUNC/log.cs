@@ -5,11 +5,11 @@ using System.Configuration;
 using System.Text;
 using System.Diagnostics;
 using System.Windows.Forms;
-using FOUNDERPCB.Models;
-using FOUNDERPCB.DAL;
-using FOUNDERPCB.BLL;
+using KB.Models;
+using KB.DAL;
+using KB.BLL;
 
-namespace FOUNDERPCB.FUNC /* 命名空间 */
+namespace KB.FUNC /* 命名空间 */
 {
    
     public class log

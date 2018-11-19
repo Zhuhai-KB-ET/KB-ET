@@ -6,12 +6,12 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace FOUNDERPCB.Module.PopWinForm
+namespace KB.Module.PopWinForm
 {
     /// <summary>
     /// 界面层
     /// </summary>
-    public partial class FrmData0016 : FOUNDERPCB.Module.PopWinFormModule
+    public partial class FrmData0016 : KB.Module.PopWinFormModule
     {
         #region 创建窗口
         IL.FrmData0016IL FrmData0016IL = null;
@@ -24,7 +24,7 @@ namespace FOUNDERPCB.Module.PopWinForm
         #region FrmData0016_Load
         private void FrmData0016_Load(object sender, EventArgs e)
         {
-            FrmData0016IL = new FOUNDERPCB.Module.PopWinForm.IL.FrmData0016IL(this);
+            FrmData0016IL = new KB.Module.PopWinForm.IL.FrmData0016IL(this);
 
             FrmData0016IL.FrmData0016_Load(sender, e);
         }

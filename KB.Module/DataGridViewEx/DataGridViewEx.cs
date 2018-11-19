@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
 
-namespace FOUNDERPCB.Module.Windows.Forms
+namespace KB.Module.Windows.Forms
 {
     /// <summary>
     /// À©Õ¹µÄ DataGridView
