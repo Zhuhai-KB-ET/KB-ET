@@ -72,7 +72,9 @@
     <Compile Include="DAL\GEN\DATA0004DAL.cs" />
     <Compile Include="DAL\GEN\DATA0005DAL.cs" />
     <Compile Include="DAL\GEN\DATA0006DAL.cs" />
+    <Compile Include="DAL\SQLHelper\AccessDBHelper.cs" />
     <Compile Include="DAL\SQLHelper\DBHelper.cs" />
+    <Compile Include="DAL\SQLHelper\SqliteDBHelper.cs" />
     <Compile Include="FUNC\AD.cs" />
     <Compile Include="FUNC\ApprovalMode.cs" />
     <Compile Include="FUNC\CIMNET_KEY.cs" />

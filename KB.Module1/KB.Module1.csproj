@@ -44,11 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\FOUNDERPCB_ANALYSISBLL.cs" />
+    <Compile Include="DAL\FOUNDERPCB_ANALYSISDAL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Analysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Analysis.Designer.cs">
+      <DependentUpon>Frm_Analysis.cs</DependentUpon>
     </Compile>
     <Compile Include="kaimodan.cs">
       <SubType>Form</SubType>
@@ -86,8 +94,12 @@
     <Compile Include="ModelTest.Designer.cs">
       <DependentUpon>ModelTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\FOUNDERPCB_ANALYSIS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Analysis.resx">
+      <DependentUpon>Frm_Analysis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="kaimodan.resx">
       <DependentUpon>kaimodan.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +137,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KB.Module\KB.Module.csproj">
+      <Project>{fcc14d35-356c-44f0-82fe-28f19fbfe2e7}</Project>
+      <Name>KB.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KB\KB.Lib.csproj">
+      <Project>{881559cc-472f-4eab-80b7-e8a67ce625a3}</Project>
+      <Name>KB.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
